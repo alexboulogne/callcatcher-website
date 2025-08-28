@@ -28,7 +28,7 @@ export default function Hero() {
   }, [businessNames.length])
 
   return (
-    <section className="section-padding pt-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="section-padding pt-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Floating Phone Emojis */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -145,7 +145,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               CallCatcher instantly texts back your missed calls so you keep the lead, 
               protect your reputation, and grow your business.
             </p>
@@ -155,7 +155,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex justify-center mb-12"
+            className="flex justify-center"
           >
             <a 
               href="#pricing"
@@ -172,7 +172,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-20 flex justify-center"
+          className="mt-16 flex justify-center"
         >
           <div className="relative">
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
