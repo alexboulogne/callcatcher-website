@@ -8,9 +8,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 export async function POST(request: NextRequest) {
   try {
     const { plan, billingCycle } = await request.json()
-    
-    console.log('Received request:', { plan, billingCycle })
-    console.log('Stripe key exists:', !!process.env.STRIPE_SECRET_KEY)
 
     // Define your Stripe Price IDs
     const products = {
@@ -63,12 +60,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ sessionId: session.id })
   } catch (error) {
     console.error('Error creating checkout session:', error)
-    console.error('Error details:', {
-      message: error instanceof Error ? error.message : 'Unknown error',
-      stack: error instanceof Error ? error.stack : undefined,
-    })
     return NextResponse.json(
-      { error: 'Internal server error', details: error instanceof Error ? error.message : 'Unknown error' },
+      { error: 'Internal server error' },
       { status: 500 }
     )
   }
