@@ -104,7 +104,7 @@ export default function Pricing() {
       period: "/month",
       description: "Your 24/7 agent that books jobs.",
       features: [
-        "Everything in Engage & Catch",
+        "Everything in Engage & Catch", 
         "Books appointments",
         "Closes leads",
         "Answers questions",

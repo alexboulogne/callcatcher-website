@@ -52,6 +52,7 @@ export async function POST(request: NextRequest) {
       },
       billing_address_collection: 'required',
       customer_email: undefined, // Will be collected during checkout
+      allow_promotion_codes: true, // Enable discount codes
     })
 
     return NextResponse.json({ sessionId: session.id })
