@@ -13,6 +13,25 @@ export default function Pricing() {
     setLoading(null)
   }, [])
 
+  // Clear loading state when user navigates back/forward
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      setLoading(null)
+    }
+
+    const handlePopState = () => {
+      setLoading(null)
+    }
+
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    window.addEventListener('popstate', handlePopState)
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload)
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [])
+
   const handleCheckout = async (planName: string) => {
     setLoading(planName)
     try {
