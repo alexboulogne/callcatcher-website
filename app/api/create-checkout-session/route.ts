@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
     // Define your Stripe Price IDs
     const products = {
       catch: {
-        monthly: 'price_1S1UfxGcY8j6tYdRcDbgSvdy',
-        yearly: 'price_1S1UgSGcY8j6tYdRncIuveND',
+        monthly: 'price_1S1XFMGcY8j6tYdRVqq537Ck',
+        yearly: 'price_1S1XIUGcY8j6tYdRuGVvuiii',
       },
       engage: {
         monthly: 'price_1S1UhEGcY8j6tYdRYOjpv50L',

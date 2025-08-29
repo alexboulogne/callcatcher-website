@@ -67,8 +67,8 @@ export default function Pricing() {
   const plans = [
     {
       name: "Catch",
-      monthly: "$99",
-      yearlyMonthly: "$83",
+      monthly: "$119",
+      yearlyMonthly: "$99",
       period: "/month",
       description: "Never lose another missed call.",
       features: [
