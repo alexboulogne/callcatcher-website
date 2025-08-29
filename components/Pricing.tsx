@@ -2,10 +2,43 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check, Star } from 'lucide-react'
+import { Check, Star, Loader2 } from 'lucide-react'
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(true)
+  const [loading, setLoading] = useState<string | null>(null)
+
+  const handleCheckout = async (planName: string) => {
+    setLoading(planName)
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          plan: planName.toLowerCase(),
+          billingCycle: isYearly ? 'yearly' : 'monthly',
+        }),
+      })
+
+      const { sessionId } = await response.json()
+      
+      // Redirect to Stripe Checkout
+      const stripe = await import('@stripe/stripe-js').then(({ loadStripe }) => 
+        loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+      )
+      
+      if (stripe) {
+        await stripe.redirectToCheckout({ sessionId })
+      }
+    } catch (error) {
+      console.error('Error creating checkout session:', error)
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setLoading(null)
+    }
+  }
 
   const plans = [
     {
@@ -145,12 +178,23 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                  plan.popular
-                    ? 'bg-primary-600 text-white hover:bg-primary-700'
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                }`}>
-                  {plan.cta}
+                <button 
+                  onClick={() => handleCheckout(plan.name)}
+                  disabled={loading === plan.name}
+                  className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
+                    plan.popular
+                      ? 'bg-primary-600 text-white hover:bg-primary-700 disabled:opacity-50'
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200 disabled:opacity-50'
+                  }`}
+                >
+                  {loading === plan.name ? (
+                    <>
+                      <Loader2 className="animate-spin" size={16} />
+                      Processing...
+                    </>
+                  ) : (
+                    plan.cta
+                  )}
                 </button>
               </motion.div>
             )
