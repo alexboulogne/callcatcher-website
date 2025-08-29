@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2023-10-16',
+  apiVersion: '2025-08-27.basil',
 })
 
 export async function POST(request: NextRequest) {
@@ -12,16 +12,16 @@ export async function POST(request: NextRequest) {
     // Define your Stripe product IDs - replace with your actual product IDs
     const products = {
       catch: {
-        monthly: 'price_xxxxx', // Replace with your Stripe price ID
-        yearly: 'price_xxxxx',  // Replace with your Stripe price ID
+        monthly: 'prod_SxPUjxtnXtZRpC',
+        yearly: 'prod_SxPVHiFhCOJgSn',
       },
       engage: {
-        monthly: 'price_xxxxx', // Replace with your Stripe price ID
-        yearly: 'price_xxxxx',  // Replace with your Stripe price ID
+        monthly: 'prod_SxPWJs0Bkxd2sy',
+        yearly: 'prod_SxPXf02jVFm8FF',
       },
       close: {
-        monthly: 'price_xxxxx', // Replace with your Stripe price ID
-        yearly: 'price_xxxxx',  // Replace with your Stripe price ID
+        monthly: 'prod_SxPYttHHmFamA6',
+        yearly: 'prod_SxPYFsG9w2Lhq8',
       },
     }
 
