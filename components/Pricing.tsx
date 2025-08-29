@@ -70,12 +70,12 @@ export default function Pricing() {
       monthly: "$99",
       yearlyMonthly: "$83",
       period: "/month",
-      description: "Never lose another lead to a missed call.",
+      description: "Never lose another missed call.",
       features: [
         "Instant text back",
         "Email alerts",
+        "Caller logging",
         "Simple setup",
-        "Caller + timestamp logging",
         "Protects revenue from lost customers"
       ],
       popular: false,
@@ -86,12 +86,12 @@ export default function Pricing() {
       monthly: "$179",
       yearlyMonthly: "$149",
       period: "/month",
-      description: "Turn missed calls into real conversations.",
+      description: "Turn missed calls into conversations.",
       features: [
-        "Instant text back",
-        "Email alerts",
+        "Everything in Catch",
         "Two-way texting",
-        "Real-time chat",
+        "Ongoing conversations",
+        "Real-time replies",
         "Keep leads warm until you call back"
       ],
       popular: false,
@@ -102,12 +102,12 @@ export default function Pricing() {
       monthly: "$349",
       yearlyMonthly: "$299",
       period: "/month",
-      description: "Book jobs and keep customers happy.",
+      description: "Your 24/7 agent that books jobs.",
       features: [
-        "Your 24/7 virtual employee",
+        "Everything in Engage & Catch,
         "Books appointments",
-        "Closes new leads",
-        "Answers FAQ's",
+        "Closes leads",
+        "Answers questions",
         "No customer goes uncontacted"
       ],
       popular: true,
