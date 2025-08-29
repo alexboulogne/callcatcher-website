@@ -9,19 +9,19 @@ export async function POST(request: NextRequest) {
   try {
     const { plan, billingCycle } = await request.json()
 
-    // Define your Stripe product IDs - replace with your actual product IDs
+    // Define your Stripe Price IDs
     const products = {
       catch: {
-        monthly: 'prod_SxPUjxtnXtZRpC',
-        yearly: 'prod_SxPVHiFhCOJgSn',
+        monthly: 'price_1S1UfxGcY8j6tYdRcDbgSvdy',
+        yearly: 'price_1S1UgSGcY8j6tYdRncIuveND',
       },
       engage: {
-        monthly: 'prod_SxPWJs0Bkxd2sy',
-        yearly: 'prod_SxPXf02jVFm8FF',
+        monthly: 'price_1S1UhEGcY8j6tYdRYOjpv50L',
+        yearly: 'price_1S1UiZGcY8j6tYdRjs9xjl6v',
       },
       close: {
-        monthly: 'prod_SxPYttHHmFamA6',
-        yearly: 'prod_SxPYFsG9w2Lhq8',
+        monthly: 'price_1S1Uj2GcY8j6tYdRNXF3ypuH',
+        yearly: 'price_1S1UjZGcY8j6tYdRKSuY4epg',
       },
     }
 
