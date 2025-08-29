@@ -1,12 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Check, Star, Loader2 } from 'lucide-react'
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(true)
   const [loading, setLoading] = useState<string | null>(null)
+
+  // Clear loading state when component mounts (when returning from Stripe)
+  useEffect(() => {
+    setLoading(null)
+  }, [])
 
   const handleCheckout = async (planName: string) => {
     setLoading(planName)
