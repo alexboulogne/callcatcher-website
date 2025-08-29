@@ -55,17 +55,6 @@ export async function POST(request: NextRequest) {
       phone_number_collection: {
         enabled: true,
       },
-      custom_fields: [
-        {
-          key: 'company_name',
-          label: {
-            type: 'custom',
-            custom: 'Company Name',
-          },
-          type: 'text',
-          optional: false,
-        },
-      ],
     })
 
     return NextResponse.json({ sessionId: session.id })
