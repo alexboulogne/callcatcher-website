@@ -56,9 +56,8 @@ export default function SuccessPage() {
         <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <h3 className="font-semibold text-gray-900 mb-2">What's Next?</h3>
           <ul className="text-sm text-gray-600 space-y-1">
-            <li>• Check your email for login credentials</li>
-            <li>• Set up your phone number integration</li>
-            <li>• Configure your auto-reply messages</li>
+            <li>• Check your email for next steps</li>
+            <li>• Complete the in-email onboarding form</li>
             <li>• Start catching those missed calls!</li>
           </ul>
         </div>
@@ -73,7 +72,7 @@ export default function SuccessPage() {
           </Link>
           
           <a
-            href="mailto:support@callcatcher.com"
+            href="mailto:alex@pioneerdigital.marketing"
             className="block text-primary-600 hover:text-primary-700 text-sm font-medium"
           >
             Need help? Contact Support
