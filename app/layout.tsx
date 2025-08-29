@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'CallCatcher - Never Lose Another Customer to a Missed Call',
     description: 'CallCatcher instantly texts back your missed calls so you keep the lead, protect your reputation, and grow your business.',
-    url: 'https://callcatcher.co',
+    url: 'https://callcatcher-website.vercel.app',
     siteName: 'CallCatcher',
     images: [
       {
-        url: 'https://callcatcher.co/og-image.svg',
+        url: 'https://callcatcher-website.vercel.app/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'CallCatcher - Never Lose Another Customer to a Missed Call',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CallCatcher - Never Lose Another Customer to a Missed Call',
     description: 'CallCatcher instantly texts back your missed calls so you keep the lead, protect your reputation, and grow your business.',
-    images: ['https://callcatcher.co/og-image.svg'],
+    images: ['https://callcatcher-website.vercel.app/og-image.svg'],
     creator: '@founderalexb',
   },
 }
