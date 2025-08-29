@@ -12,9 +12,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-gray-900">
+            <a href="#" className="text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors">
               CallCatcher
-            </h1>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
