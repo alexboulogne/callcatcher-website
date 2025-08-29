@@ -51,10 +51,7 @@ export async function POST(request: NextRequest) {
         billingCycle,
       },
       billing_address_collection: 'required',
-      customer_creation: 'always',
-      phone_number_collection: {
-        enabled: true,
-      },
+      customer_email: undefined, // Will be collected during checkout
     })
 
     return NextResponse.json({ sessionId: session.id })

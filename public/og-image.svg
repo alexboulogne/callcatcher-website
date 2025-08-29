@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="white"/>
+  
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Floating phone icons -->
+  <g opacity="0.1">
+    <path d="M150 150 L150 200 Q150 220 170 220 L200 220 Q220 220 220 200 L220 150 Q220 130 200 130 L170 130 Q150 130 150 150 Z" fill="#6b7280"/>
+    <path d="M170 140 L170 190 Q170 200 180 200 L190 200 Q200 200 200 190 L200 140 Q200 130 190 130 L180 130 Q170 130 170 140 Z" fill="#6b7280"/>
+    <circle cx="185" cy="165" r="3" fill="#6b7280"/>
+  </g>
+  
+  <g opacity="0.1">
+    <path d="M950 300 L950 350 Q950 370 970 370 L1000 370 Q1020 370 1020 350 L1020 300 Q1020 280 1000 280 L970 280 Q950 280 950 300 Z" fill="#6b7280"/>
+    <path d="M970 290 L970 340 Q970 350 980 350 L990 350 Q1000 350 1000 340 L1000 290 Q1000 280 990 280 L980 280 Q970 280 970 290 Z" fill="#6b7280"/>
+    <circle cx="985" cy="315" r="3" fill="#6b7280"/>
+  </g>
+  
+  <g opacity="0.1">
+    <path d="M200 450 L200 500 Q200 520 220 520 L250 520 Q270 520 270 500 L270 450 Q270 430 250 430 L220 430 Q200 430 200 450 Z" fill="#6b7280"/>
+    <path d="M220 440 L220 490 Q220 500 230 500 L240 500 Q250 500 250 490 L250 440 Q250 430 240 430 L230 430 Q220 430 220 440 Z" fill="#6b7280"/>
+    <circle cx="235" cy="465" r="3" fill="#6b7280"/>
+  </g>
+  
+  <!-- Main content -->
+  <g font-family="Inter, system-ui, sans-serif">
+    <!-- Logo -->
+    <text x="600" y="120" font-size="48" font-weight="bold" text-anchor="middle" fill="#111827">CallCatcher</text>
+    
+    <!-- Headline -->
+    <text x="600" y="220" font-size="64" font-weight="bold" text-anchor="middle" fill="#111827">Never Lose Another Customer to a</text>
+    <text x="600" y="290" font-size="64" font-weight="bold" text-anchor="middle">
+      <tspan fill="#111827">Missed </tspan>
+      <tspan fill="#2563eb">Call</tspan>
+    </text>
+    
+    <!-- Subheadline -->
+    <text x="600" y="380" font-size="28" text-anchor="middle" fill="#6b7280" max-width="800">
+      CallCatcher instantly texts back your missed calls so you keep the lead, protect your reputation, and grow your business.
+    </text>
+    
+    <!-- CTA Button -->
+    <rect x="450" y="420" width="300" height="60" rx="12" fill="#2563eb"/>
+    <text x="600" y="460" font-size="24" font-weight="600" text-anchor="middle" fill="white">Start Catching Calls Today</text>
+  </g>
+</svg>
